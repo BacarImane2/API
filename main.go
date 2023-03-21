@@ -99,9 +99,8 @@ func main() {
 
 	v1 := router.Group("/api/v1")
 	{
-		// Categories routes
 
-		        // Catégories routes
+		                // Catégories routes
 
 				v1.POST("/ajout-categorie", createCategorie)
 				v1.GET("/liste-categories", getAllCategories)
@@ -171,7 +170,7 @@ func main() {
 
 	router.Run(":8080")
 }
-// Function Categories 
+// Fonction Categories 
 func getAllCategories(c *gin.Context) {
 	db := dbConn()
 	defer db.Close()
@@ -419,7 +418,7 @@ func deleteHotel(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Hôtel supprimé avec succès"})
 }
 
-// Function service 
+// Fonction service 
 func createService(c *gin.Context) {
 	var service Service
 	err := json.NewDecoder(c.Request.Body).Decode(&service)
@@ -543,7 +542,7 @@ func deleteService(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Service supprimé avec succès"})
 }
 
-// function Client
+// fonction Client
 
 func createClient(c *gin.Context) {
 	var client Client
@@ -667,7 +666,7 @@ func deleteClient(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Client supprimé avec succès"})
 }
 
-// Function  Facture
+// Fonction  Facture
 func createFacture(c *gin.Context) {
 	var facture Facture
 	err := json.NewDecoder(c.Request.Body).Decode(&facture)
@@ -791,7 +790,7 @@ func deleteFacture(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Facture supprimée avec succès"})
 }
 
-// Function reservation 
+// Fonction reservation 
 func createReservation(c *gin.Context) {
 	var reservation Reservation
 	err := json.NewDecoder(c.Request.Body).Decode(&reservation)
@@ -915,7 +914,7 @@ func deleteReservation(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Réservation supprimée avec succès"})
 }
 
-// Function Chambre 
+// Fonction Chambre 
 
 func createChambre(c *gin.Context) {
 	var chambre Chambre
@@ -1041,7 +1040,7 @@ func deleteChambre(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Chambre supprimée avec succès "})
 }
 
-// Fucntion Niveau
+// Fonction Niveau
 
 func createNiveau(c *gin.Context) {
 	var niveau Niveau
